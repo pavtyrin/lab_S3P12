@@ -1,0 +1,10 @@
+0 Elbrus Russia Mountain 5642 0.0 0
+1 Baikal Russia Lake 0 31722.0 0
+2 Moscow Russia City 0 2511.0 12615882
+3 Everest Nepal Mountain 8848 0.0 0
+4 Victoria Uganda Lake 0 69485.0 0
+5 Saint-Petersburg Russia City 0 1439.0 5384342
+6 Aral Kazakhstan Lake 0 68700.0 0
+7 Kazbek Georgia Mountain 5033 0.0 0
+8 Astana Kazakhstan City 0 722.0 1190900
+9 Issyk-Kul Kyrgyzstan Lake 0 6236.0 0
