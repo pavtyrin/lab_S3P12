@@ -125,7 +125,7 @@ Geography createObjectDefault()
 }
 
 // Функция для создания объекта с помощью конструктора с параметрами
-Geography createObjectWithParameters()
+Geography createObjectWithParameters(Geography* dataArray, int& count)
 {
     int id, height, population;
     double area;
@@ -140,7 +140,26 @@ Geography createObjectWithParameters()
         try
         {
             id = stoi(input);
-            break;
+
+        bool idExists = false;
+            for (int i = 0; i < count; ++i)
+            {
+                if (dataArray[i].getId() == id)
+                {
+                    idExists = true;
+                    break;
+                }
+            }
+
+            if (idExists)
+            {
+                cout << endl;
+                cout << "Ошибка: Id уже занят. Повторите ввод.\n";
+            }
+            else
+            {
+                break;
+            }
         }
         catch (invalid_argument&)
         {
@@ -225,7 +244,7 @@ Geography* createObjectArray(Geography* dataArray, int& count, int newCount)
     {
         cout << endl;
         cout << "Запись № " << (count + i) << " " << endl;
-        newDataArray[count + i] = createObjectWithParameters();
+        newDataArray[count + i] = createObjectWithParameters(dataArray, count);
     }
 
     count += newCount;
@@ -457,7 +476,7 @@ int main()
         
         if (choice == "2")
         {
-            Geography obj = createObjectWithParameters();
+            Geography obj = createObjectWithParameters(dataArray, count);
             cout << endl;
             cout << "Объект создан с помощью конструктора с параметрами:\n";
             cout << endl;
